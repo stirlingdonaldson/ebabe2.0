@@ -110,24 +110,7 @@ export default function LoginScreen() {
       marginTop: 16,
       alignItems: 'center',
     },
-    decorativeLeft: {
-      position: 'absolute',
-      top: height * 0.35,
-      left: 16,
-      width: 70,
-      height: 70,
-      backgroundColor: '#333333',
-      borderRadius: 20,
-    },
-    decorativeRight: {
-      position: 'absolute',
-      top: height * 0.55,
-      right: 16,
-      width: 90,
-      height: 60,
-      backgroundColor: '#444444',
-      borderRadius: 20,
-    },
+
   });
 
   return (
@@ -209,9 +192,7 @@ export default function LoginScreen() {
           </View>
         </View>
 
-        {/* Decorative Elements */}
-        <View style={[styles.bentoItem, styles.decorativeLeft]}></View>
-        <View style={[styles.bentoItem, styles.decorativeRight]}></View>
+
       </View>
     </SafeAreaView>
   );

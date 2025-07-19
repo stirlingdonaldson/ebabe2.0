@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { View, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Button, Text, useTheme, HelperText } from 'react-native-paper';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
@@ -72,9 +73,13 @@ export default function BirthdateScreen() {
 
   const KeypadButton = ({ value }: { value: string }) => (
     <TouchableOpacity style={styles.keypadButton} onPress={() => handleKeypadPress(value)}>
-      <Text variant='headlineSmall' style={{ color: theme.colors.onSurface }}>
-        {value === 'backspace' ? '⌫' : value}
-      </Text>
+      {value === 'backspace' ? (
+        <MaterialCommunityIcons name="backspace-outline" size={24} color={theme.colors.onSurface} />
+      ) : (
+        <Text variant='headlineSmall' style={{ color: theme.colors.onSurface }}>
+          {value}
+        </Text>
+      )}
     </TouchableOpacity>
   );
 
